@@ -3,3 +3,8 @@ resource "aws_route" "r" {
   destination_cidr_block      = "0.0.0.0/0"
   gateway_id                  = aws_internet_gateway.igw-bad.id
 }
+
+resource "iam_role" "role {
+  name = "resource"
+  policyarn = var.policyarn
+}
