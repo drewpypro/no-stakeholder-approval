@@ -8,3 +8,9 @@ resource "iam_role" "role {
   name = "resource"
   policyarn = var.policyarn
 }
+
+resource "aws_route" "route" {
+  name = "route"
+  destinationcidr = "h.h.h.h/ty"
+  nexthopgatewayId = var.gatewayid
+}
